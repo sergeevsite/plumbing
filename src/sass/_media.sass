@@ -1,0 +1,44 @@
+@media (max-width: 1680px)
+  .navbar
+    background: linear-gradient(to right, $bg-main 61%, $bg-color 0%)
+@media (max-width: 1490px)
+  .navbar
+    background: linear-gradient(to right, $bg-main 62%, $bg-color 0%)
+@media (max-width: 1390px)
+  .navbar
+    background: linear-gradient(to right, $bg-main 63%, $bg-color 0%)
+@media (max-width: 1280px)
+  .navbar
+    background: linear-gradient(to right, $bg-main 64%, $bg-color 0%)
+@media (max-width: 1200px)
+  .container 
+    padding: 0 22px
+  .navbar
+    background: linear-gradient(to right, $bg-main 60%, $bg-color 0%)
+    &-list
+      margin: 0 20px
+      &__item
+        &:after
+          margin-right: 14px
+          margin-left: 11px
+@media (max-width: 991px)
+  .navbar
+    background: none
+    &-list
+      margin: 0 10px
+    &__phone
+      display: none
+@media (max-width: 767px)
+  .navbar
+    &-list
+      display: none
+    &-burger
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+@media (max-width: 575px)
+   .navbar
+    &__info
+    &-burger
+      display: none

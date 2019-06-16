@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Proxima Nova Rg';
+  font-family: 'Proxima Nova Regular';
   src: url("../fonts/ProximaNova/ProximaNova-Regular.eot");
   src: local("Proxima Nova Regular"), local("ProximaNova-Regular"), url("../fonts/ProximaNova/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Regular.ttf") format("truetype");
   font-weight: normal;
@@ -7,19 +7,19 @@
 }
 
 @font-face {
-  font-family: 'Proxima Nova Rg';
-  src: url("../fonts/ProximaNova/ProximaNova-Bold.eot");
-  src: local("Proxima Nova Bold"), local("ProximaNova-Bold"), url("../fonts/ProximaNova/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Bold.ttf") format("truetype");
-  font-weight: bold;
+  font-family: 'Proxima Nova Semibold';
+  src: url("../fonts/ProximaNova/ProximaNova-Semibold.eot");
+  src: local("ProximaNovaCond-Semibold"), local("ProximaNovaCond-Semibold"), url("../fonts/ProximaNova/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Semibold.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Semibold.ttf") format("truetype");
+  font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Proxima Nova BoldIt';
-  src: url("../fonts/ProximaNova/ProximaNova-BoldIt.eot");
-  src: local("Proxima Nova Bold Italic"), local("ProximaNova-BoldIt"), url("../fonts/ProximaNova/ProximaNova-BoldIt.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-BoldIt.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-BoldIt.ttf") format("truetype");
+  font-family: 'Proxima Nova Bold';
+  src: url("../fonts/ProximaNova/ProximaNova-Bold.eot");
+  src: local("Proxima Nova Bold"), local("ProximaNova-Bold"), url("../fonts/ProximaNova/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Bold.ttf") format("truetype");
   font-weight: bold;
-  font-style: italic;
+  font-style: normal;
 }
 
 * {
@@ -30,7 +30,8 @@
 }
 
 body {
-  font-family: 'Proxima Nova Rg', sans-serif;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  font-weight: 600;
 }
 
 img {
@@ -43,11 +44,12 @@ img {
 }
 
 .button {
-  padding: 10px 16px;
+  padding: 7px 14px;
   border: none;
   background-color: #ffc800;
-  font-family: 'Proxima Nova Bold', sans-serif;
-  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  font-weight: 600;
 }
 
 .button:hover {
@@ -66,6 +68,7 @@ img {
 }
 
 .navbar-block {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,7 +77,7 @@ img {
           justify-content: space-between;
 }
 
-.navbar-menu {
+.navbar__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,12 +97,15 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 135px;
+  margin-right: 71px;
   text-transform: uppercase;
   font-size: 15px;
-  font-family: 'Proxima Nova BoldIt', sans-serif;
   font-style: italic;
-  font-weight: 700;
+}
+
+.navbar__list {
+  margin: 0 65px;
+  padding-bottom: 4px;
 }
 
 .navbar-list {
@@ -119,8 +125,9 @@ img {
   content: '';
   display: inline-block;
   width: 1px;
-  height: 12px;
-  margin: 0 30px;
+  height: 11px;
+  margin-right: 31px;
+  margin-left: 21px;
   background-color: #d9d9d9;
 }
 
@@ -129,7 +136,6 @@ img {
 }
 
 .navbar-list__text {
-  font-weight: 400;
   font-size: 16px;
 }
 
@@ -149,17 +155,207 @@ img {
 }
 
 .navbar__phone {
-  margin-left: 55px;
-  margin-right: 43px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 42px;
+  margin-bottom: 4px;
   font-size: 18px;
 }
 
-.navbar__phone img {
-  width: 16px;
-}
-
 .navbar__phone a {
+  margin-left: 6px;
   text-decoration: none;
   color: #020202;
+}
+
+.navbar__phone b {
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-weight: 700;
+}
+
+.navbar-burger {
+  display: none;
+}
+
+.navbar-burger__button {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #f7f7f7;
+  border-radius: 30%;
+  position: relative;
+  z-index: 3;
+}
+
+.navbar-burger__button:after, .navbar-burger__button:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 4px;
+  background-color: #020202;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.navbar-burger__button:before {
+  width: 17px;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.navbar-burger__button_active:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.navbar-burger__button_active:before {
+  width: 20px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.navbar-burger__item {
+  display: none;
+  background-color: #f7f7f7;
+  width: 90px;
+  height: 30px;
+  position: absolute;
+  left: calc(50% - 15px);
+  top: calc(50% - 15px);
+  z-index: 0;
+}
+
+.navbar-burger__item_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-burger__item_active:nth-child(1) {
+  -webkit-transform: translate(-130%, -60%);
+          transform: translate(-130%, -60%);
+}
+
+.navbar-burger__item_active:nth-child(2) {
+  -webkit-transform: translate(-120%, 80%);
+          transform: translate(-120%, 80%);
+}
+
+.navbar-burger__item_active:nth-child(3) {
+  -webkit-transform: translate(-34%, 220%);
+          transform: translate(-34%, 220%);
+}
+
+.navbar-burger__item_active:nth-child(4) {
+  -webkit-transform: translate(52%, 80%);
+          transform: translate(52%, 80%);
+}
+
+.navbar-burger__item_active:nth-child(5) {
+  -webkit-transform: translate(62%, -60%);
+          transform: translate(62%, -60%);
+}
+
+.navbar-burger__list a {
+  text-decoration: none;
+  color: #020202;
+}
+
+@media (max-width: 1680px) {
+  .navbar {
+    background: -webkit-gradient(linear, left top, right top, color-stop(61%, #ffffff), color-stop(0%, #f7f7f7));
+    background: linear-gradient(to right, #ffffff 61%, #f7f7f7 0%);
+  }
+}
+
+@media (max-width: 1490px) {
+  .navbar {
+    background: -webkit-gradient(linear, left top, right top, color-stop(62%, #ffffff), color-stop(0%, #f7f7f7));
+    background: linear-gradient(to right, #ffffff 62%, #f7f7f7 0%);
+  }
+}
+
+@media (max-width: 1390px) {
+  .navbar {
+    background: -webkit-gradient(linear, left top, right top, color-stop(63%, #ffffff), color-stop(0%, #f7f7f7));
+    background: linear-gradient(to right, #ffffff 63%, #f7f7f7 0%);
+  }
+}
+
+@media (max-width: 1280px) {
+  .navbar {
+    background: -webkit-gradient(linear, left top, right top, color-stop(64%, #ffffff), color-stop(0%, #f7f7f7));
+    background: linear-gradient(to right, #ffffff 64%, #f7f7f7 0%);
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 22px;
+  }
+  .navbar {
+    background: -webkit-gradient(linear, left top, right top, color-stop(60%, #ffffff), color-stop(0%, #f7f7f7));
+    background: linear-gradient(to right, #ffffff 60%, #f7f7f7 0%);
+  }
+  .navbar-list {
+    margin: 0 20px;
+  }
+  .navbar-list__item:after {
+    margin-right: 14px;
+    margin-left: 11px;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    background: none;
+  }
+  .navbar-list {
+    margin: 0 10px;
+  }
+  .navbar__phone {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-list {
+    display: none;
+  }
+  .navbar-burger {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar-burger {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

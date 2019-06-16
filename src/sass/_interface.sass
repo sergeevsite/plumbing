@@ -3,7 +3,7 @@
   padding: 0
   box-sizing: border-box
 body
-  font-family: 'Proxima Nova Rg', sans-serif
+  +semibold
 img
   max-width: 100%
 .container
@@ -11,10 +11,11 @@ img
   margin: 0 auto
 // Кнопка
 .button
-  padding: 10px 16px
+  padding: 7px 14px
   border: none
   background-color: $main-color
-  +bold
+  font-size: 14px
+  +semibold
   &:hover
     background-color: lighten($main-color, 10%)
     cursor: pointer
