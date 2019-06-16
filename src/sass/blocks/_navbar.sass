@@ -1,0 +1,52 @@
+.navbar
+  padding: 8px 0
+  background: linear-gradient(to right, $bg-main 59%, $bg-color 0%)
+  &-block
+    display: flex
+    justify-content: space-between
+  &-menu
+    display: flex
+    align-items: center
+  &__logo
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-right: 135px
+    text-transform: uppercase
+    font-size: 15px
+    +bold-it
+  &-list
+    display: flex
+    justify-content: space-between
+    &__item
+      list-style: none
+      &:after
+        content: ''
+        display: inline-block
+        width: 1px
+        height: 12px
+        margin: 0 30px
+        background-color: $divider-color
+      &:last-child
+        &:after
+          display: none
+    &__text
+      font-weight: 400
+      font-size: 16px
+      &:hover
+        cursor: pointer
+        border-bottom: 2px solid $main-color
+        color: $main-color
+  &__info
+    display: flex
+    align-items: center
+  &__phone
+    margin-left: 55px
+    margin-right: 43px
+    font-size: 18px
+    img
+      width: 16px
+    a
+      text-decoration: none
+      color: $text-color
+      

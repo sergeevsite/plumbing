@@ -1,0 +1,22 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+body
+  font-family: 'Proxima Nova Rg', sans-serif
+img
+  max-width: 100%
+.container
+  max-width: 1170px
+  margin: 0 auto
+// Кнопка
+.button
+  padding: 10px 16px
+  border: none
+  background-color: $main-color
+  +bold
+  &:hover
+    background-color: lighten($main-color, 10%)
+    cursor: pointer
+  &:focus
+    outline: none
