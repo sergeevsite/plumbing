@@ -17,63 +17,115 @@
             <span class="navbar__name">Logo</span>
         </div>
         <div class="navbar__menu">
-            <ul class="navbar-list navbar__list">
-                <li class="navbar-list__item">
-                  <span class="navbar-list__text">Услуги</span>
-                </li>
-                <li class="navbar-list__item">
-                  <span class="navbar-list__text">Цены</span>
-                </li>
-                <li class="navbar-list__item">
-                  <span class="navbar-list__text">Отзывы</span>
-                </li>
-                <li class="navbar-list__item">
-                  <span class="navbar-list__text">Новости</span>
-                </li>
-                <li class="navbar-list__item">
-                  <span class="navbar-list__text">Контакты</span>
-                </li>
-              </ul>
-              <!-- Меню на маленьких экранах -->
-              <div class="navbar-burger">
-                <a href="#" class="navbar-burger__button">
-                  <div class="navbar-burger__line"></div>
-                </a>
-                <div class="navbar-burger__list">
-                  <a href="#" class="navbar-burger__item">
-                    <span class="navbar-burger__text">Услуги</span>
-                  </a>
-                  <a href="#" class="navbar-burger__item">
-                    <span class="navbar-burger__text">Цены</span>
-                  </a>
-                  <a href="#" class="navbar-burger__item">
-                    <span class="navbar-burger__text">Отзывы</span>
-                  </a>
-                  <a href="#" class="navbar-burger__item">
-                    <span class="navbar-burger__text">Новости</span>
-                  </a>
-                  <a href="#" class="navbar-burger__item">
-                    <span class="navbar-burger__text">Контакты</span>
-                  </a>
-                </div>
-              </div>
-              <!-- /.navbar-burger -->
+          <ul class="navbar-list navbar__list">
+            <li class="navbar-list__item">
+              <span class="navbar-list__text">Услуги</span>
+            </li>
+            <li class="navbar-list__item">
+              <span class="navbar-list__text">Цены</span>
+            </li>
+            <li class="navbar-list__item">
+              <span class="navbar-list__text">Отзывы</span>
+            </li>
+            <li class="navbar-list__item">
+              <span class="navbar-list__text">Новости</span>
+            </li>
+            <li class="navbar-list__item">
+              <span class="navbar-list__text">Контакты</span>
+            </li>
+          </ul>
+          <!-- Меню на маленьких экранах -->
+          <div class="navbar-burger">
+            <a href="#" class="navbar-burger__button">
+              <div class="navbar-burger__line"></div>
+            </a>
+            <div class="navbar-burger__list">
+              <a href="#" class="navbar-burger__item">
+                <span class="navbar-burger__text">Услуги</span>
+              </a>
+              <a href="#" class="navbar-burger__item">
+                <span class="navbar-burger__text">Цены</span>
+              </a>
+              <a href="#" class="navbar-burger__item">
+                <span class="navbar-burger__text">Отзывы</span>
+              </a>
+              <a href="#" class="navbar-burger__item">
+                <span class="navbar-burger__text">Новости</span>
+              </a>
+              <a href="#" class="navbar-burger__item">
+                <span class="navbar-burger__text">Контакты</span>
+              </a>
+            </div>
+          </div>
+          <!-- /.navbar-burger -->
         </div>
         <!-- /.navbar-menu -->
-          <div class="navbar__info">
+        <div class="navbar__info">
             <div class="navbar__phone">
               <img src="img/navbar/phone.png" alt="Иконка телефона">
               <a href="tel:+78633422221">+7 (863) <b>342-22-21</b></a>
             </div>
             <button class="button navbar__button">Заказать звонок</button>
-          </div>
+        </div>
+        <!-- /.navbar__info -->
       </div>
       <!-- /.navbar-block -->
     </div>
     <!-- /.container -->
   </nav>
   <!-- /.navbar -->
+
+  <main>
+    <section class="section hero">
+      <div class="hero-slider">
+        <div class="slider__item">
+          <img src="img/hero/hero-image-1.jpg" alt="">
+        </div>
+        <div class="slider__item">
+          <img src="img/hero/hero-image-2.jpg" alt="">
+        </div>
+        <div class="slider__item">
+          <img src="img/hero/hero-image-3.jpg" alt="">
+        </div>
+        <div class="slider__item">
+          <img src="img/hero/hero-image-4.jpg" alt="">
+        </div>
+      </div>
+      <div class="container">
+        <div class="hero-block">
+          <h1 class="hero__title">Наша бригада  по монтированию отопления и сантехники</h1>
+          <!-- /.hero__title -->
+          <span class="hero__subtitle">вызов по Москве и Московской области</span>
+          <!-- /.hero__subtitle -->
+          <p class="hero__description">Наша бригада из 20 человек сделает всё быстро и недорого в самые кратчайшие сроки.Всё что Вам нужно это оставить заявку либо позвонить самому на указанный номер. Всего хорошего.</p>
+          <!-- /.hero__description -->
+          <button class="button hero__button">подробнее</button>
+          <div class="wrap-dots">
+            <div class="hero__dots"></div>
+          </div>
+        </div>
+        <!-- /.hero-block -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section hero -->
+
+  </main>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/navbar-menu.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.hero-slider').slick({
+        arrows: false,
+        dots: true,
+        infinite: true,
+        speed: 600,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        appendDots: $('.hero__dots')
+      });
+    });
+  </script>
 </body>
 </html>

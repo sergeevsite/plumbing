@@ -1,0 +1,52 @@
+.hero
+  position: relative
+  background-color: $text-color
+  &-block
+    position: absolute
+    top: 0
+  &__title
+    margin-top: 211px
+    margin-bottom: 22px
+    color: $main-color
+    font-size: 35px
+    text-transform: uppercase
+  &__subtitle
+    display: block
+    margin-bottom: 41px
+    color: $second-color
+    font-size: 35px
+    +reg
+  &__description
+    margin-bottom: 54px
+    max-width: 1106px
+    width: 100%
+    color: $second-color
+    font-size: 20px
+    line-height: 28px
+    opacity: 0.75
+    +reg
+  &__button
+    margin-bottom: 207px
+  &-slider
+    opacity: 0.3
+// стилизация точек на слайдере
+.hero__dots li button
+  width: 20px
+  height: 20px
+  margin-left: 5px
+  margin-right: 5px
+  border: none
+  background-color: $bg-main
+  color: #fff
+  &:focus
+    outline: none
+  &:hover
+    cursor: pointer
+li.slick-active button
+  background-color: $main-color
+  border: none
+  color: $main-color
+.slick-dots
+  display: flex
+  justify-content: center
+  list-style: none
