@@ -1,20 +1,22 @@
-@media (max-width: 1680px)
-  .navbar
-    background: linear-gradient(to right, $bg-main 61%, $bg-color 0%)
-@media (max-width: 1490px)
-  .navbar
-    background: linear-gradient(to right, $bg-main 62%, $bg-color 0%)
-@media (max-width: 1390px)
-  .navbar
-    background: linear-gradient(to right, $bg-main 63%, $bg-color 0%)
-@media (max-width: 1280px)
-  .navbar
-    background: linear-gradient(to right, $bg-main 64%, $bg-color 0%)
+// Адаптив для шапки
+// @media (max-width: 1680px)
+//   .navbar
+//     background: linear-gradient(to right, $white 61%, $bg-color 0%)
+// @media (max-width: 1490px)
+//   .navbar
+//     background: linear-gradient(to right, $white 62%, $bg-color 0%)
+// @media (max-width: 1390px)
+//   .navbar
+//     background: linear-gradient(to right, $white 63%, $bg-color 0%)
+// @media (max-width: 1280px)
+//   .navbar
+//     background: linear-gradient(to right, $white 64%, $bg-color 0%)
+
 @media (max-width: 1200px)
   .container 
     padding: 0 22px
   .navbar
-    background: linear-gradient(to right, $bg-main 60%, $bg-color 0%)
+    // background: linear-gradient(to right, $white 60%, $bg-color 0%)
     &-list
       margin: 0 20px
       &__item
@@ -30,6 +32,8 @@
       display: none
 @media (max-width: 767px)
   .navbar
+    &__logo
+      margin-right: 0
     &-list
       display: none
     &-burger
@@ -37,8 +41,16 @@
       display: flex
       justify-content: center
       align-items: center
-@media (max-width: 575px)
-   .navbar
-    &__info
-    &-burger
+    &__menu
       display: none
+@media (max-width: 420px)
+  .navbar
+    &__info
+      display: none
+  .burger
+    &-menu
+      transform: translate(-110px ,170px)
+  
+    
+
+// Адаптив для блока hero

@@ -1,5 +1,5 @@
-$('.navbar-burger__button').on('click', function(e){
+$('.burger__button').on('click', function(e){
   e.preventDefault;
-  $(this).toggleClass('navbar-burger__button_active');
-  $('.navbar-burger__item').toggleClass('navbar-burger__item_active');
+  $(this).toggleClass('burger__button_active');
+  $('.burger__item').toggleClass('burger__item_active');
 });

@@ -10,73 +10,78 @@
 </head>
 <body>
   <nav class="navbar">
-    <div class="container">
-      <div class="navbar-block">
-        <div class="navbar__logo">
-            <img src="img/navbar/logo.png" alt="Логотип">
-            <span class="navbar__name">Logo</span>
-        </div>
-        <div class="navbar__menu">
-          <ul class="navbar-list navbar__list">
-            <li class="navbar-list__item">
-              <span class="navbar-list__text">Услуги</span>
-            </li>
-            <li class="navbar-list__item">
-              <span class="navbar-list__text">Цены</span>
-            </li>
-            <li class="navbar-list__item">
-              <span class="navbar-list__text">Отзывы</span>
-            </li>
-            <li class="navbar-list__item">
-              <span class="navbar-list__text">Новости</span>
-            </li>
-            <li class="navbar-list__item">
-              <span class="navbar-list__text">Контакты</span>
-            </li>
-          </ul>
-          <!-- Меню на маленьких экранах -->
-          <div class="navbar-burger">
-            <a href="#" class="navbar-burger__button">
-              <div class="navbar-burger__line"></div>
-            </a>
-            <div class="navbar-burger__list">
-              <a href="#" class="navbar-burger__item">
-                <span class="navbar-burger__text">Услуги</span>
-              </a>
-              <a href="#" class="navbar-burger__item">
-                <span class="navbar-burger__text">Цены</span>
-              </a>
-              <a href="#" class="navbar-burger__item">
-                <span class="navbar-burger__text">Отзывы</span>
-              </a>
-              <a href="#" class="navbar-burger__item">
-                <span class="navbar-burger__text">Новости</span>
-              </a>
-              <a href="#" class="navbar-burger__item">
-                <span class="navbar-burger__text">Контакты</span>
-              </a>
+    <div class="background__left">
+        <div class="container">
+            <div class="navbar__logo">
+                <img src="img/navbar/logo.png" alt="Логотип">
+                <span class="navbar__name">Logo</span>
+            </div>
+            <div class="navbar__menu">
+              <ul class="navbar-list navbar__list">
+                <li class="navbar-list__item">
+                  <span class="navbar-list__text">Услуги</span>
+                </li>
+                <li class="navbar-list__item">
+                  <span class="navbar-list__text">Цены</span>
+                </li>
+                <li class="navbar-list__item">
+                  <span class="navbar-list__text">Отзывы</span>
+                </li>
+                <li class="navbar-list__item">
+                  <span class="navbar-list__text">Новости</span>
+                </li>
+                <li class="navbar-list__item">
+                  <span class="navbar-list__text">Контакты</span>
+                </li>
+              </ul>
+            </div>
+            <!-- /.navbar-menu -->
+            <!-- Меню на маленьких экранах -->
+            <div class="navbar-burger">
+              <button class="burger__button"></button>
+              <div class="burger-menu">
+                <a href="#" class="burger__item">
+                  <span class="burger__text">Услуги</span>
+                </a>
+                <a href="#" class="burger__item">
+                  <span class="burger__text">Цены</span>
+                </a>
+                <a href="#" class="burger__item">
+                  <span class="burger__text">Отзывы</span>
+                </a>
+                <a href="#" class="burger__item">
+                  <span class="burger__text">Новости</span>
+                </a>
+                <a href="#" class="burger__item">
+                  <span class="burger__text">Контакты</span>
+                </a>
+              </div>
             </div>
           </div>
-          <!-- /.navbar-burger -->
-        </div>
-        <!-- /.navbar-menu -->
-        <div class="navbar__info">
-            <div class="navbar__phone">
-              <img src="img/navbar/phone.png" alt="Иконка телефона">
-              <a href="tel:+78633422221">+7 (863) <b>342-22-21</b></a>
-            </div>
-            <button class="button navbar__button">Заказать звонок</button>
-        </div>
-        <!-- /.navbar__info -->
-      </div>
-      <!-- /.navbar-block -->
     </div>
+    <div class="background__right">
+        <div class="container">
+            <div class="navbar__info">
+              <div class="navbar__phone">
+                <img src="img/navbar/phone.png" alt="Иконка телефона">
+                <a href="tel:+78633422221">+7 (863) <b>342-22-21</b></a>
+              </div>
+              <button class="button navbar__button">Заказать звонок</button>
+            </div>
+            <!-- /.navbar__info -->
+    
+         
+        </div>
+    </div>
+
+        <!-- /.navbar-menu -->
+
     <!-- /.container -->
   </nav>
   <!-- /.navbar -->
 
   <main>
-    <section class="section hero">
+    <section class="hero">
       <div class="hero-slider">
         <div class="slider__item">
           <img src="img/hero/hero-image-1.jpg" alt="">
@@ -110,6 +115,76 @@
     </section>
     <!-- /.section hero -->
 
+    <section class="section service">
+      <div class="container">
+        <div class="service-block">
+          <h2 class="section-title service__title">Услуги</h2>
+          <div class="cards">
+            <div class="card service__card">
+              <img src="img/service/service-1.jpg" alt="">
+                <span class="card__text">Монтаж систем <br> отопления</span>
+                <button class="button card__button">
+                  <span>узнать цену</span>
+                </button>
+              </div>
+            <div class="card service__card">
+              <img src="img/service/service-2.jpg" alt="">
+                <span class="card__text">Здесь будет короткое описание о данной услуге</span>
+                <button class="button card__button">
+                  <span>узнать цену</span>
+                </button>
+            </div>
+            <div class="card service__card">
+              <img src="img/service/service-3.jpg" alt="">
+                <span class="card__text">Монтаж канализационного оборудования</span>
+                <button class="button card__button">
+                  <span>узнать цену</span>
+                </button>
+            </div>
+            <div class="card service__card">
+              <img src="img/service/service-1.jpg" alt="">
+                <span class="card__text">Монтаж систем <br> отопления</span>
+                <button class="button card__button">
+                  <span>узнать цену</span>
+                </button>
+            </div>
+            <div class="card service__card">
+              <img src="img/service/service-2.jpg" alt="">
+                <span class="card__text">Монтаж сантехнического оборудования</span>
+                <button class="button card__button">
+                  <span>узнать цену</span>
+                </button>
+            </div>
+            <div class="card service__card">
+              <img src="img/service/service-3.jpg" alt="">
+                <span class="card__text">Монтаж канализационного оборудования</span>
+                <button class="button card__button">
+                  <span>узнать цену</span>
+                </button>
+            </div>
+          </div>
+          <!-- /.cards -->
+        </div>
+      </div>
+      <!-- /.contrainer -->
+    </section>
+    <!-- /.section service -->
+
+    <section class="section advantages">
+      <div class="div"></div>
+      <div class="container">
+          <h2 class="section-title advantages__title">почему мы?</h2>
+          <!-- /.h2 section-title advantages__title -->
+          <div class="advantages-block">
+            <div class="advantages__cards"></div>
+            <div class="advantages__list"></div>
+          </div>
+          <!-- /.advantages-block -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section advantages -->
+
   </main>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/navbar-menu.js"></script>
@@ -122,8 +197,17 @@
         infinite: true,
         speed: 600,
         autoplay: true,
-        autoplaySpeed: 1000,
-        appendDots: $('.hero__dots')
+        autoplaySpeed: 2000,
+        appendDots: $('.hero__dots'),
+        variableWidth: true,
+        responsive: [
+    {
+      breakpoint: 575,
+      settings: {
+        dots: false
+      }
+    }
+  ]
       });
     });
   </script>
