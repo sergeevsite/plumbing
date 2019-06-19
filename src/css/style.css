@@ -1004,8 +1004,15 @@ li.slick-active button {
           align-items: center;
 }
 
-.section {
+.feedback {
+  margin-top: -43px;
+  padding-bottom: 48px;
   background-color: #000000;
+}
+
+.feedback__title {
+  -webkit-transform: translate(-30px, -125px);
+          transform: translate(-30px, -125px);
 }
 
 .feedback__item {
@@ -1022,10 +1029,13 @@ li.slick-active button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 100px;
+  margin-top: 12px;
+  margin-right: -16px;
+  margin-left: -16px;
 }
 
 .feedback__photo {
+  margin-bottom: 16px;
   border-radius: 50%;
 }
 
@@ -1035,8 +1045,8 @@ li.slick-active button {
   height: 35px;
   background-color: #ffc800;
   border-radius: 50%;
-  -webkit-transform: translate(70px, -120px);
-          transform: translate(70px, -120px);
+  -webkit-transform: translate(75px, -134px);
+          transform: translate(75px, -134px);
 }
 
 .feedback__quotes img {
@@ -1044,14 +1054,17 @@ li.slick-active button {
 }
 
 .feedback__name {
+  margin-bottom: 15px;
   font-size: 20px;
   color: #ffc800;
 }
 
 .feedback__text {
+  margin-bottom: 24px;
   max-width: 500px;
   text-align: center;
   font-size: 20px;
+  line-height: 1.4;
   color: #ffffff;
   font-family: 'Proxima Nova', sans-serif;
   font-weight: 400;
@@ -1132,9 +1145,68 @@ li.slick-active button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 208px;
-  margin-left: 10px;
+  margin-top: 106px;
+  margin-left: 0px;
   list-style: none;
+}
+
+.news-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.news-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+}
+
+.news__button {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.block {
+  color: #020202;
+}
+
+.block__image {
+  margin-bottom: 20px;
+}
+
+.block__text {
+  margin-right: 90px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 700;
+}
+
+.block__data {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.block__data b {
+  min-width: 25;
+  background-color: #ffc800;
+}
+
+.block__description {
+  margin-top: 15px;
+  width: 320px;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 400;
 }
 
 @media (max-width: 1200px) {
