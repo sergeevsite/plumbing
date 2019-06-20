@@ -435,10 +435,63 @@
     </section>
     <!-- /.section news -->
 
+    <section class="section callback">
+      <div class="container callback__container">
+        <div class="callback__wrap">
+          <h3 class="callback__title">оставьте <span>заявку</span></h3>
+          <form action="#" class="form callback__form">
+            <input type="text" class="input form__input" placeholder="Введите Ваше имя">
+            <input type="tel" class="input form__input" placeholder="Введите Ваш номер телефона">
+            <button class="button form__button">заказать звонок</button>
+          </form>
+        </div>
+      </div>
+      <!-- /.container -->
+      <!-- Карта -->
+      <div class="map" id="map"></div>
+    </section>
+    <!-- /.section form -->
   </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-wrap">
+        <div class="footer-address">
+          <img src="./img/footer/map.png" alt="карта" class="footer__icon">
+          <a href="https://yandex.ru/maps/213/moscow/?from=api-maps&l=map&ll=37.762869%2C55.798757&mode=usermaps&origin=jsapi_2_1_74&um=constructor%3A9be676bab37bd38be921d1531fa97f706de84b746655eb47f497f821804e220a&z=17" target="_blank">г. Москва, ул. Советская 48 корп. 3</a>
+        </div>
+        <!-- /.footer-address -->
+        <div class="footer-social">
+          <div class="footer__social">
+            <a href="https://www.instagram.com/" target="_blank"><img src="./img/footer/instagram.png" alt="instagram"></a>
+          </div>
+          <div class="footer__social">
+            <a href="https://vk.com/" target="_blank"><img src="./img/footer/vk.png" alt="vk"></a>
+          </div>
+          <div class="footer__social">
+            <a href="https://ok.ru/" target="_blank"><img src="./img/footer/odnoklassniki.png" alt="одноклассники"></a>
+          </div>
+        </div>
+        <!-- /.footer-social -->
+        <div class="footer-contacts">
+          <div class="footer__mail">
+            <img src="./img/footer/envelope.png" alt="конверт">
+            <a href="mailto:infosanteh@gmail.com">infosanteh@gmail.com</a>
+          </div>
+          <div class="footer__phone">
+            <img src="./img/footer/phone.png" alt="телефон">
+            <a href="tel:+78633422221">+7 (863) <b>342-22-21</b></a>
+          </div>
+        </div>
+        <!-- /.footer-contacts -->
+      </div>
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- /.footer -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="js/navbar-menu.js"></script>
-  <script src="js/slick.min.js"></script>
+  <script src="./js/load-map.js"></script>
+  <script src="./js/navbar-menu.js"></script>
+  <script src="./js/slick.min.js"></script>
   <script>
     $(document).ready(function(){
       $('.hero-slider').slick({
