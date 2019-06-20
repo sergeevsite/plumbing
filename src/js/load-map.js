@@ -1,4 +1,4 @@
-var news = $('.news');
+var news = $('.advantages');
 var newsTop = news.offset().top;
 $(window).bind('scroll', function(){
   var windowTop = $(this).scrollTop();
