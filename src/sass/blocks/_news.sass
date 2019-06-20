@@ -1,21 +1,32 @@
 .news
+  padding-top: 87px
+  padding-bottom: 71px
   &-wrap
     display: flex
     justify-content: space-between
     flex-wrap: wrap
+  &__title
+    transform: translate(-30px, -116px)
   &-button
     display: flex
     justify-content: center
-    margin-top: 76px
+    margin-top: 64px
   &__button
+    padding: 18px 41px
     font-size: 20px
     text-transform: uppercase
 .block
   color: $text-color
+  &:nth-child(2)
+    p, h3
+      text-decoration: underline
+    h3
+      margin-right: 65px
   &__image
-    margin-bottom: 20px
+    margin-bottom: 23px
   &__text
-    margin-right: 90px
+    display: inline-block
+    margin-right: 53px
     font-size: 20px
     text-transform: uppercase
     +bold
@@ -23,11 +34,11 @@
     font-size: 16px
     text-transform: uppercase
     b
-      min-width: 25
+      padding: 5px 4px
       background-color: $main-color
   &__description
     margin-top: 15px
-    width: 320px
+    width: 330px
     font-size: 18px
     line-height: 28px
     +reg

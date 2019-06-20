@@ -1,6 +1,6 @@
 .advantages
   margin-top: 141px
-  margin-bottom: 150px
+  margin-bottom: 119px
   background-image: url('../img/advantages/advantages-bg.png')
   background-position: left
   background-size: 57.4%
@@ -9,17 +9,16 @@
     transform: translate(-30px, -27px)
   &-block
     display: flex
+    justify-content: space-between
   &__box
+    width: 66%
     margin: 96px 0
-    flex-basis: 95%
-    margin-right: 75px
   &__steps
-    margin: 96px 0
-    flex-basis: 50%
+    width: 36%
+    margin: 76px 0
 .box
   display: flex
   flex-wrap: wrap
-  justify-content: space-between
   &__item
     position: relative
     display: flex
@@ -31,17 +30,13 @@
     width: 198px
     height: 168px
     background-color: $white
-    &:nth-child(1n+4)
-      padding-bottom: 20px
+    // &:nth-child(1n+4)
+    //   padding-bottom: 20px
   &__image
     margin-top: 13px
     height: 55px
     display: flex
     align-items: flex-end
-      // display: block
-      // margin: auto
-      // margin-top: 16px
-      // margin-bottom: 15px
   &__text
     margin-top: 15px
     margin-left: 6px
@@ -74,4 +69,7 @@
   &__item
     display: flex
     align-items: center
+    margin-bottom: 74px
+    margin-top: 9px
   &__text
+    font-size: 20px

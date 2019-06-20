@@ -901,7 +901,7 @@ li.slick-active button {
 
 .advantages {
   margin-top: 141px;
-  margin-bottom: 150px;
+  margin-bottom: 119px;
   background-image: url("../img/advantages/advantages-bg.png");
   background-position: left;
   background-size: 57.4%;
@@ -917,19 +917,19 @@ li.slick-active button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .advantages__box {
+  width: 66%;
   margin: 96px 0;
-  -ms-flex-preferred-size: 95%;
-      flex-basis: 95%;
-  margin-right: 75px;
 }
 
 .advantages__steps {
-  margin: 96px 0;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  width: 36%;
+  margin: 76px 0;
 }
 
 .box {
@@ -938,9 +938,6 @@ li.slick-active button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .box__item {
@@ -961,10 +958,6 @@ li.slick-active button {
   width: 198px;
   height: 168px;
   background-color: #ffffff;
-}
-
-.box__item:nth-child(1n+4) {
-  padding-bottom: 20px;
 }
 
 .box__image {
@@ -1014,11 +1007,18 @@ li.slick-active button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 74px;
+  margin-top: 9px;
+}
+
+.steps__text {
+  font-size: 20px;
 }
 
 .feedback {
   margin-top: -43px;
   padding-bottom: 48px;
+  margin-bottom: 147px;
   background-color: #000000;
 }
 
@@ -1072,7 +1072,7 @@ li.slick-active button {
 }
 
 .feedback__text {
-  margin-bottom: 24px;
+  margin-bottom: 27px;
   max-width: 500px;
   text-align: center;
   font-size: 20px;
@@ -1089,7 +1089,7 @@ li.slick-active button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-width: 100px;
+  min-width: 110px;
 }
 
 .opinion__like {
@@ -1124,6 +1124,7 @@ li.slick-active button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  outline: none;
 }
 
 .feedback__dots li button {
@@ -1157,9 +1158,14 @@ li.slick-active button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: -102px;
+  margin-top: -105px;
   margin-left: -9px;
   list-style: none;
+}
+
+.news {
+  padding-top: 87px;
+  padding-bottom: 71px;
 }
 
 .news-wrap {
@@ -1173,6 +1179,11 @@ li.slick-active button {
       flex-wrap: wrap;
 }
 
+.news__title {
+  -webkit-transform: translate(-30px, -116px);
+          transform: translate(-30px, -116px);
+}
+
 .news-button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1180,10 +1191,11 @@ li.slick-active button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 76px;
+  margin-top: 64px;
 }
 
 .news__button {
+  padding: 18px 41px;
   font-size: 20px;
   text-transform: uppercase;
 }
@@ -1192,12 +1204,21 @@ li.slick-active button {
   color: #020202;
 }
 
+.block:nth-child(2) p, .block:nth-child(2) h3 {
+  text-decoration: underline;
+}
+
+.block:nth-child(2) h3 {
+  margin-right: 65px;
+}
+
 .block__image {
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
 
 .block__text {
-  margin-right: 90px;
+  display: inline-block;
+  margin-right: 53px;
   font-size: 20px;
   text-transform: uppercase;
   font-family: 'Proxima Nova', sans-serif;
@@ -1210,13 +1231,13 @@ li.slick-active button {
 }
 
 .block__data b {
-  min-width: 25;
+  padding: 5px 4px;
   background-color: #ffc800;
 }
 
 .block__description {
   margin-top: 15px;
-  width: 320px;
+  width: 330px;
   font-size: 18px;
   line-height: 28px;
   font-family: 'Proxima Nova', sans-serif;
@@ -1226,7 +1247,6 @@ li.slick-active button {
 .callback {
   margin: 0;
   padding: 0;
-  padding-top: 7px;
 }
 
 .callback__container {
