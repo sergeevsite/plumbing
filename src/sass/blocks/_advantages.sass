@@ -1,6 +1,6 @@
 .advantages
   margin-top: 141px
-  margin-bottom: 119px
+  margin-bottom: 186px
   background-image: url('../img/advantages/advantages-bg.png')
   background-position: left
   background-size: 57.4%
@@ -12,10 +12,15 @@
     justify-content: space-between
   &__box
     width: 66%
-    margin: 96px 0
+    margin-top: 96px
+    margin-bottom: 60px
   &__steps
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     width: 36%
     margin: 76px 0
+    margin-top: 90px
 .box
   display: flex
   flex-wrap: wrap
@@ -30,14 +35,15 @@
     width: 198px
     height: 168px
     background-color: $white
-    // &:nth-child(1n+4)
-    //   padding-bottom: 20px
   &__image
     margin-top: 13px
     height: 55px
     display: flex
     align-items: flex-end
   &__text
+    position: absolute
+    top: 0
+    transform: translate(-1px, 70px)
     margin-top: 15px
     margin-left: 6px
     line-height: 23px
@@ -45,31 +51,28 @@
     text-transform: uppercase
     color: $text-color
 .steps
-  &__list
-    list-style: none
   &__figure
-    font-size: 35px
+    margin-left: 3px
+    font-size: 37px
     text-transform: uppercase
     +bold
     min-width: 30px
-    // &:after
-    //   display: inline-block
-    //   content: ''
-    //   width: 31px
-    //   height: 2px
-    //   background-color: $black
-    //   margin-left: 20px
-    //   margin-right: 16px
+    color: $main-color
   &__line
     min-width: 31px
     height: 2px
     background-color: $black
     margin-right: 16px
-    margin-left: 6px
+    margin-left: 4px
   &__item
+    position: relative
     display: flex
     align-items: center
-    margin-bottom: gpx
-    margin-top: 9px
+    margin-bottom: 6px
   &__text
+    position: absolute
+    top: 0
+    left: 0
+    transform: translate(83px, 10px)
+    max-width: 390px
     font-size: 20px
