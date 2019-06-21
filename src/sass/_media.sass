@@ -216,3 +216,41 @@
   .form 
     &__button
       font-size: 16px
+// Адаптив для блока footer
+@media (max-width: 991px)
+  .footer
+    &-address
+      margin-bottom: 10px
+@media (max-width: 768px)
+  .footer
+    &-wrap
+      align-items: baseline
+@media (max-width: 576px)
+  .footer
+    &-wrap
+      justify-content: center
+    &-address
+      font-size: 18px
+    &-contacts
+      flex-wrap: wrap
+      margin-bottom: 20px
+      font-size: 16px
+    &-social
+      &:nth-child(2)
+        order: 1
+    &__social
+      &:first-child
+        margin-left: 44px
+@media (max-width: 380px)
+  .footer
+    &-address
+      align-items: baseline
+      text-align: center
+    &__mail
+      &:after
+        display: none
+    &__phone
+      margin-top: 10px
+    &__social
+      &:first-child
+        margin-left: 20px

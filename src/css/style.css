@@ -5116,4 +5116,61 @@ li.slick-active button {
     font-size: 16px;
   }
 }
+
+@media (max-width: 991px) {
+  .footer-address {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-wrap {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-wrap {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer-address {
+    font-size: 18px;
+  }
+  .footer-contacts {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .footer-social:nth-child(2) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .footer__social:first-child {
+    margin-left: 44px;
+  }
+}
+
+@media (max-width: 380px) {
+  .footer-address {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    text-align: center;
+  }
+  .footer__mail:after {
+    display: none;
+  }
+  .footer__phone {
+    margin-top: 10px;
+  }
+  .footer__social:first-child {
+    margin-left: 20px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
