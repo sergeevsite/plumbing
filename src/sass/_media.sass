@@ -1,22 +1,22 @@
 // Адаптив для шапки
-// @media (max-width: 1680px)
-//   .navbar
-//     background: linear-gradient(to right, $white 61%, $bg-color 0%)
-// @media (max-width: 1490px)
-//   .navbar
-//     background: linear-gradient(to right, $white 62%, $bg-color 0%)
-// @media (max-width: 1390px)
-//   .navbar
-//     background: linear-gradient(to right, $white 63%, $bg-color 0%)
-// @media (max-width: 1280px)
-//   .navbar
-//     background: linear-gradient(to right, $white 64%, $bg-color 0%)
+@media (max-width: 1680px)
+  .navbar
+    background: linear-gradient(to right, $white 61%, $bg-color 0%)
+@media (max-width: 1490px)
+  .navbar
+    background: linear-gradient(to right, $white 62%, $bg-color 0%)
+@media (max-width: 1390px)
+  .navbar
+    background: linear-gradient(to right, $white 63%, $bg-color 0%)
+@media (max-width: 1280px)
+  .navbar
+    background: linear-gradient(to right, $white 64%, $bg-color 0%)
 
 @media (max-width: 1200px)
   .container 
     padding: 0 22px
   .navbar
-    // background: linear-gradient(to right, $white 60%, $bg-color 0%)
+    background: linear-gradient(to right, $white 60%, $bg-color 0%)
     &-list
       margin: 0 20px
       &__item
@@ -50,7 +50,169 @@
   .burger
     &-menu
       transform: translate(-110px ,170px)
-  
-    
-
 // Адаптив для блока hero
+@media (max-width: 1200px)
+  .slick-dots
+    margin-top: 145px
+  .hero
+    &__description
+      max-width: 850px
+@media (max-width: 991px)
+  .slick-dots
+    margin-top: 175px
+  .hero
+    &__title
+      margin-bottom: 25px
+      margin-top: 180px
+      font-size: 31px
+    &__subtitle
+      margin-bottom: 20px
+      font-size: 31px
+    &__description
+      font-size: 16px
+      max-width: 830px
+@media (max-width: 767px)
+  .slick-dots
+    margin-top: 125px
+  .hero
+    &__description
+      font-size: 16px
+      max-width: 600px
+@media (max-width: 575px)
+  .slick-dots
+    margin-top: 175px
+  .hero
+    &__title
+      margin-bottom: 25px
+      margin-top: 100px
+      font-size: 27px
+    &__subtitle
+      margin-bottom: 20px
+      font-size: 27px
+    &__description
+      font-size: 14px
+      max-width: 830px
+// Адаптив для блока service
+@media (max-width: 1200px)
+  .service
+    &__title
+      transform: translate(0px, -133px)
+  .card
+    margin-left: 20px
+    margin-right: 20px
+    &:nth-child(3n-3)
+      margin-left: 20px
+      margin-right: 20px
+    &s
+      justify-content: center
+@media (max-width: 768px)
+  .service
+    &__title
+      font-size: 21px
+      transform: translate(0px, -127px)
+// Адаптив для блока advantages
+@media (max-width: 1200px)
+  .advantages
+    background-size: 100%
+    &__title
+      transform: translate(0px, -27px)
+    &__box
+      justify-content: center
+  .steps
+    width: 45%
+    &__text
+      width: 290px
+@media (max-width: 991px)
+  .advantages
+    &-block
+      flex-direction: column
+      align-items: center
+  .box
+    margin-bottom: 0
+  .steps
+    width: 100%
+    max-width: 300px
+    &__item
+      margin-bottom: 50px
+@media (max-width: 640px)
+  .advantages
+    &__title
+      font-size: 21px
+  .box
+    &__item
+      margin-right: 0
+@media (max-width: 576px)
+  .box
+    &__text
+      font-size: 16px
+  .steps
+    &__text
+      width: 160px
+      font-size: 18px
+// Адаптив для блока feedback
+@media (max-width: 1200px)
+  .feedback
+    &__title
+      transform: translate(0px, -130px)
+@media (max-width: 768px)
+  .feedback
+    &__title
+      transform: translate(0px, -126px)
+      font-size: 21px
+// Адаптив для блока news
+@media (max-width: 1200px)
+  .news
+    &__title
+      transform: translate(0px, -116px)
+    &-wrap
+      justify-content: space-around
+    &__block
+      margin-top: 50px
+@media (max-width: 991px)
+  .news
+    &-wrap
+      justify-content: center
+    &__block
+      margin-left: 10px
+      margin-right: 10px
+@media (max-width: 768px)
+  .news
+    &__title
+      font-size: 21px
+    &__button
+      padding: 18px 30px
+      font-size: 18px
+@media (max-width: 576px)
+  .block
+    &__text
+      font-size: 18px
+    &__data
+      display: block
+      margin-top: 12px
+      font-size: 14px
+    &__description
+      font-size: 16px
+// Адаптив для блока callback
+@media (max-width: 1200px)
+  .callback
+    &__wrap
+      transform: translate(131px, 142px)
+@media (max-width: 991px)
+  .callback
+    &__container
+      display: flex
+      justify-content: center
+    &__wrap
+      position: relative
+      transform: translate(0, 0)
+      margin-bottom: 50px
+    &__title
+      margin-top: 0
+      padding-top: 40px
+@media (max-width: 768px)
+  .callback
+    &__title
+      font-size: 18px
+  .form 
+    &__button
+      font-size: 16px

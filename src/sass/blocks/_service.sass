@@ -3,15 +3,18 @@
   margin-bottom: 20px
   display: flex
   justify-content: center
-  filter: grayscale(100%)
-  &:hover
-    filter: grayscale(0%)
   &:nth-child(3n-3)
     margin-right: 0
+  img
+    filter: grayscale(100%)
+    object-fit: cover
+    &:hover
+      filter: grayscale(0%)
   &__text
     position: absolute
     top: 0
-    width: 300px
+    width: 100%
+    max-width: 300px
     margin-top: 58px
     margin-left: 5px
     text-align: center
