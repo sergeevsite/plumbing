@@ -841,6 +841,13 @@ li.slick-active button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.card:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
 }
 
 .card:nth-child(3n-3) {
