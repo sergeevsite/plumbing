@@ -20,19 +20,19 @@
                 <div class="navbar-burger">
                   <button class="burger__button"></button>
                   <div class="burger-menu">
-                    <a href="#" class="burger__item">
+                    <a href="#service" class="burger__item">
                       <span class="burger__text">Услуги</span>
                     </a>
-                    <a href="#" class="burger__item">
+                    <a href="#advantages" class="burger__item">
                       <span class="burger__text">Цены</span>
                     </a>
-                    <a href="#" class="burger__item">
+                    <a href="#feedback" class="burger__item">
                       <span class="burger__text">Отзывы</span>
                     </a>
-                    <a href="#" class="burger__item">
+                    <a href="#news" class="burger__item">
                       <span class="burger__text">Новости</span>
                     </a>
-                    <a href="#" class="burger__item">
+                    <a href="#footer" class="burger__item">
                       <span class="burger__text">Контакты</span>
                     </a>
                   </div>
@@ -57,17 +57,16 @@
               </ul>
             </div>
             <!-- /.navbar-menu -->
-            
 
             <div class="navbar__info">
               <div class="navbar__phone">
                 <img src="img/navbar/phone.png" alt="Иконка телефона">
                 <a href="tel:+78633422221">+7 (863) <b>342-22-21</b></a>
               </div>
-              <button class="button navbar__button wow slideInDown">Заказать звонок</button>
+              <button id="button" class="button navbar__button wow slideInDown">Заказать звонок</button>
             </div>
             <!-- /.navbar__info -->
-                      </div>
+          </div>
           <!-- /.navbar-block -->
       </div>
       <!-- /.container -->
@@ -492,11 +491,35 @@
     <!-- /.container -->
   </footer>
   <!-- /.footer -->
+
+  <div id="modal" class="modal animated pulse">
+    <div class="modal-dialog">
+      <button class="modal-dialog__close" id="close">&times;</button>
+      <h5 class="modal-dialog__title">Введите свой номер телефона и с вами свяжуться в течение 15 минут</h5>
+      <input class="input modal-dialog__input phone" name="phone" required type="tel" placeholder="Введите свой телефон">
+      <button class="button modal-dialog__button">Отправить</button>
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+  <div id="success" class="success">
+    <div class="success-dialog">
+      <button class="success-dialog__close" id="close-scs">&times;</button>
+      <img src="./img/modal/checked.png" alt="success">
+      <h5 class="success-dialog__title">Заявка принята!</h5>
+      <span class="success-dialog__text">В скором времени с Вами свяжется менеджер.</span>
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="./js/load-map.js"></script>
   <script src="./js/navbar-menu.js"></script>
   <script src="./js/slick.min.js"></script>
   <script src="./js/wow.min.js"></script>
+  <script src="./js/jquery.maskedinput.min.js"></script>
   <script>
     $(document).ready(function(){
 // Инициализация wow анимации
@@ -553,7 +576,7 @@
     // }
   ]
       });
-    });
+});
   </script>
 </body>
 </html>
