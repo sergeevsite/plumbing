@@ -442,9 +442,9 @@
       <div class="container callback__container">
         <div class="callback__wrap">
           <h3 class="callback__title">оставьте <span>заявку</span></h3>
-          <form action="#" class="form callback__form">
-            <input type="text" class="input form__input" placeholder="Введите Ваше имя">
-            <input type="tel" class="input form__input" placeholder="Введите Ваш номер телефона">
+          <form action="#" id="callback-form" class="form callback__form">
+            <input id="callback-name" type="text" name="username" required class="input form__input" placeholder="Введите Ваше имя">
+            <input id="callback-phone" type="tel" name="phone" required class="input form__input" placeholder="Введите Ваш номер телефона">
             <button class="button form__button">заказать звонок</button>
           </form>
         </div>
@@ -519,7 +519,7 @@
   <script src="./js/navbar-menu.js"></script>
   <script src="./js/slick.min.js"></script>
   <script src="./js/wow.min.js"></script>
-  <script src="./js/jquery.maskedinput.min.js"></script>
+  <script src="./js/jquery.validate.min.js"></script>
   <script>
     $(document).ready(function(){
 // Инициализация wow анимации
@@ -575,6 +575,29 @@
     //   }
     // }
   ]
+      });
+// Валидация форм
+$('#callback-form').validate( {
+        errorElement: "div",
+        errorClass: "invalid",
+        rules: {
+          username: {
+            required: true,
+            minlength: 2
+          },
+          phone: {
+            required: true
+          },
+        },
+        messages: {
+          username: {
+            required: "Заполните поле",
+            minlength: jQuery.validator.format("Добавить минимум {0} символа")
+          },
+          phone: {
+            required: "Заполните поле"
+          }
+        }
       });
 });
   </script>

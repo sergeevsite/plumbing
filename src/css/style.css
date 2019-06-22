@@ -438,6 +438,27 @@ img {
   border-bottom: 1px solid #ffc800;
 }
 
+div.invalid {
+  font-size: 14px;
+  color: red;
+}
+
+#callback-name-error {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#callback-phone-error {
+  position: absolute;
+  top: 210px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+}
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -5259,6 +5280,10 @@ li.slick-active button {
 }
 
 @media (max-width: 768px) {
+  .callback__wrap {
+    max-width: 365px;
+    height: 345px;
+  }
   .callback__title {
     font-size: 18px;
   }
@@ -5330,6 +5355,15 @@ li.slick-active button {
   }
   .footer__social:first-child {
     margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #callback-name-error {
+    top: 135px;
+  }
+  #callback-phone-error {
+    top: 200px;
   }
 }
 /*# sourceMappingURL=style.css.map */

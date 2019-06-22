@@ -40,14 +40,19 @@ $(".burger__item").click(function () {
       modal.removeClass('modal_active');
     });
     $('.form__button').on('click', function(e) {
-      e.preventDefault();
-      success.addClass('success_active');
-      modal.removeClass('modal_active');
+      if ($('#callback-name').hasClass('valid') && $('#callback-phone').hasClass('valid')) {
+        e.preventDefault();
+        $(this).closest('form').find("input[type=text]").val("");
+        $(this).closest('form').find("input[type=tel]").val("");
+        success.addClass('success_active'); 
+        modal.removeClass('modal_active');
+        $('input').removeClass('valid')
+      } else {
+      }
     });
     closeScs.on('click', function(e) {
       e.preventDefault();
       success.removeClass('success_active');
-
     });
     setInterval(function() {
       success.removeClass('success_active');

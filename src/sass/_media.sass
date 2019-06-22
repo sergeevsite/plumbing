@@ -228,6 +228,9 @@
       padding-top: 40px
 @media (max-width: 768px)
   .callback
+    &__wrap
+      max-width: 365px
+      height: 345px
     &__title
       font-size: 18px
   .form
@@ -279,3 +282,9 @@
     &__social
       &:first-child
         margin-left: 20px
+// Валидация форм
+@media (max-width: 768px)
+  #callback-name-error
+    top: 135px
+  #callback-phone-error
+    top: 200px
