@@ -59,7 +59,7 @@ $('.burger__item').click(function (e){
     $('#callback-form').on('submit', function(e) {
       e.preventDefault();
       $.ajax({
-        url: './mail.php',
+        url: 'mail.php',
         type: 'POST',
         data: $(this).serialize()
       });

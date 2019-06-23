@@ -15,7 +15,7 @@ $mail->SMTPAuth = true;                               // Enable SMTP authenticat
 $mail->Username = 'leader.site@mail.ru'; // Ваш логин от почты с которой будут отправляться письма
 $mail->Password = 'FD3ddD39ls2'; // Ваш пароль от почты с которой будут отправляться письма
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
+$mail->Port = 25; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
 $mail->setFrom('leader.site@mail.ru'); // от кого будет уходить письмо?
 $mail->addAddress('pochtasteam@inbox.ru');     // Кому будет уходить письмо 
