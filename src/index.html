@@ -9,7 +9,7 @@
   <link rel="SHORTCUT ICON" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(54174784, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54174784" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  <!-- Yandex.Metrika counter --> <script > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(54174784, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54174784" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
   <nav class="navbar">
         <div class="container">
           <div class="navbar-block">
@@ -443,10 +443,10 @@
       <div class="container callback__container">
         <div class="callback__wrap">
           <h3 class="callback__title">оставьте <span>заявку</span></h3>
-          <form action="#" id="callback-form" class="form callback__form">
-            <input id="callback-name" type="text" name="username" required maxlength="15g" class="input form__input" placeholder="Введите Ваше имя">
+          <form action="#" id="callback-form" class="form callback__form" onsubmit="ym(54174784, 'reachGoal', 'callback-form'); return true;">
+            <input id="callback-name" type="text" name="username" required maxlength="15" class="input form__input" placeholder="Введите Ваше имя">
             <input id="callback-phone" type="tel" name="phone" required class="input form__input phone" placeholder="Введите Ваш номер телефона">
-            <button id="callback-button" onclick="ym(54174784, 'reachGoal', 'callback-button'); return true;" class="button form__button">заказать звонок</button>
+            <button id="callback-button" class="button form__button">заказать звонок</button>
           </form>
         </div>
       </div>
@@ -497,7 +497,7 @@
     <div class="modal-dialog">
       <button class="modal-dialog__close" id="close">&times;</button>
       <h5 class="modal-dialog__title">Введите свой номер телефона и с вами свяжуться в течение 15 минут</h5>
-      <form id="modal-form" action="mail.php" method="POST">
+      <form action="#" id="modal-form" onsubmit="ym(54174784, 'reachGoal', 'modal-form'); return true;">
         <input id="modal-phone" class="input modal-dialog__input phone" name="phone" required type="tel" placeholder="Введите свой телефон">
         <button class="button modal-dialog__button">Отправить</button>
       </form>
@@ -518,12 +518,12 @@
 
 <!-- Подключение скриптов -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="./js/load-map.js"></script>
-    <script src="./js/navbar-menu.js"></script>
+    <script src="./js/load-map.min.js"></script>
+    <script src="./js/function.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/wow.min.js"></script>
     <script src="./js/jquery.validate.min.js"></script>
     <script src="./js/jquery.maskedinput.min.js"></script>
-    <script src="./js/scripts.js"></script>
+    <script src="./js/scripts.min.js"></script>
   </body>
 </html>

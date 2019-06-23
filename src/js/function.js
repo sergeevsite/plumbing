@@ -42,47 +42,59 @@ $('.burger__item').click(function (e){
     });
 
     var closeScs = $('#close-scs');
-    var success= $('#success');
+    var modalSuccess = $('#success');
 
 //Форма в модального окна в шапке
-    $('.modal-dialog__button').on('click', function(e) {
+    $('#modal-form').on('submit', function(event) {
+      event.preventDefault();
       if ($('#modal-phone').val().length) {
-        e.preventDefault();
-        $(this).closest('form').find("input[type=tel]").val('');
-        success.addClass('success_active'); 
-        modal.removeClass('modal_active');
-        $('input').removeClass('valid')
+        $.ajax({
+          url: 'mail.php',
+          type: 'POST',
+          data: $(this).serialize(),
+          success: function(data) {
+            $(this).closest('form').find("input[type=tel]").val('');
+            modalSuccess.addClass('success_active'); 
+            modal.removeClass('modal_active');
+            $('input').removeClass('valid')
+          }
+        }); 
       } else {
-      }
-    });
-// Форма в секции callback
-    $('.form__button').on('click', function(e) {
-      var len = $('#callback-name').val().length;
-      if( len >= 2 ){
-        if ($('#callback-name').val().length && $('#callback-phone').val().length) {
-          e.preventDefault();
-          $(this).closest('form').find("input[type=text]").val('');
-          $(this).closest('form').find("input[type=tel]").val('');
-          success.addClass('success_active'); 
-          modal.removeClass('modal_active');
-          $('input').removeClass('valid')
-        } else {
-        }
-      } else {
-        return;
       }
     });
 
 // Кнопка закрыть в модальном окне success
     closeScs.on('click', function(e) {
       e.preventDefault();
-      success.removeClass('success_active');
+      modalSuccess.removeClass('success_active');
     });
 
 // Интервал закрытия окна success
     setInterval(function() {
-      success.removeClass('success_active');
+      modalSuccess.removeClass('success_active');
     }, 3000 );
 
-// Обработка и отправка формы через AJAX
+// Обработка и отправка формы через AJAX в секции callback
+  $('#callback-form').on('submit', function(event){
+    event.preventDefault();
+    var len = $('#callback-name').val().length;
+      if ( len >= 2 ){
+        if ($('#callback-name').val().length && $('#callback-phone').val().length) {
+          $.ajax({
+            url: 'mail.php',
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function(data) {
+              $(this).closest('form').find("input[type=text]").val('');
+              $(this).closest('form').find("input[type=tel]").val('');
+              modalSuccess.addClass('success_active');
+              $('input').removeClass('valid')
+            }
+          });
+        } else {
+        }
+      } else {
+        return;
+      }
+    });
 });
