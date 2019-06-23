@@ -87,3 +87,21 @@ li.slick-active button
   list-style: none
 .feedback__slide
   width: 701px
+// Адаптив для слайдера в секции feedback
+@media (max-width: 1201px)
+  .slick-initialized .slick-slide
+    display: flex
+    justify-content: center
+@media (max-width: 768px)
+  .feedback
+    &__dots
+      visibility: hidden
+    &__name
+      font-size: 18px
+    &__text
+      font-size: 18px
+@media (max-width: 576px)
+  .feedback
+    &__text
+      max-width: 290px
+      font-size: 15px

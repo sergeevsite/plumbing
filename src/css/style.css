@@ -4672,6 +4672,36 @@ li.slick-active button {
   width: 701px;
 }
 
+@media (max-width: 1201px) {
+  .slick-initialized .slick-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .feedback__dots {
+    visibility: hidden;
+  }
+  .feedback__name {
+    font-size: 18px;
+  }
+  .feedback__text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .feedback__text {
+    max-width: 290px;
+    font-size: 15px;
+  }
+}
+
 .news {
   padding-top: 87px;
   padding-bottom: 71px;

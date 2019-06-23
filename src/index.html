@@ -258,7 +258,7 @@
       <div class="container">
         <h2 id="feedback" class="section-title feedback__title">отзывы</h2>
         <!-- /.section-title feedback__title -->
-        <div class="feedback-slider">
+        <div class="feedback-slider owl-carousel">
           <!-- Первый слайд -->
           <div class="feedback__slide">
             <div class="feedback__item">
@@ -392,10 +392,10 @@
                 <span class="opinion__number">2</span>
               </div>
             </div>
-            </div>
+          </div>
         </div>
-        </div>
-        <div class="feedback__dots"></div>
+      </div>
+      <div class="feedback__dots"></div>
       </div>
       <!-- /.container -->
     </section>
@@ -443,7 +443,7 @@
         <div class="callback__wrap">
           <h3 class="callback__title">оставьте <span>заявку</span></h3>
           <form action="#" id="callback-form" class="form callback__form">
-            <input id="callback-name" type="text" name="username" required maxlength="15" class="input form__input" placeholder="Введите Ваше имя">
+            <input id="callback-name" type="text" name="username" required maxlength="15g" class="input form__input" placeholder="Введите Ваше имя">
             <input id="callback-phone" type="tel" name="phone" required class="input form__input phone" placeholder="Введите Ваш номер телефона">
             <button class="button form__button">заказать звонок</button>
           </form>
@@ -523,6 +523,7 @@
   <script src="./js/wow.min.js"></script>
   <script src="./js/jquery.validate.min.js"></script>
   <script src="./js/jquery.maskedinput.min.js"></script>
+  <script src="./js/owl.carousel.min.js"></script>
   <script>
     $(document).ready(function(){
 // Инициализация wow анимации
@@ -547,6 +548,12 @@
   ]
       });
 // Слайдер секции с отзывами
+      // $('.owl-carousel').owlCarousel({
+      //   // loop: true,
+      //   dots: true,
+      //   dotsContainer: '.feedback-dots',
+      //   items: 2,
+      // });
       $('.feedback-slider').slick({
         slidesToShow: 2,
         slidesToScroll: 2,
@@ -560,23 +567,19 @@
     {
       breakpoint: 1201,
       settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
         variableWidth: false,
       }
     },
     {
-      breakpoint: 991,
+      breakpoint: 1000,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
+        centerMode: true,
       }
     }
-    // {
-    //   breakpoint: 480,
-    //   settings: {
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1
-    //   }
-    // }
   ]
       });
 // Валидация форм
