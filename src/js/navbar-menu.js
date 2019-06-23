@@ -48,17 +48,27 @@ $('.burger__item').click(function (e){
       }
     });
 // Форма в секции callback
+    
     $('.form__button').on('click', function(e) {
-      if ($('#callback-name').val().length && $('#callback-phone').val().length) {
-        e.preventDefault();
-        $(this).closest('form').find("input[type=text]").val("");
-        $(this).closest('form').find("input[type=tel]").val("");
-        success.addClass('success_active'); 
-        modal.removeClass('modal_active');
-        $('input').removeClass('valid')
+      var len = $('#callback-name').val().length;
+
+      if( len >= 2 ){
+        if ($('#callback-name').val().length && $('#callback-phone').val().length) {
+          e.preventDefault();
+          $(this).closest('form').find("input[type=text]").val('');
+          $(this).closest('form').find("input[type=tel]").val('');
+          success.addClass('success_active'); 
+          modal.removeClass('modal_active');
+          $('input').removeClass('valid')
+        } else {
+        }
       } else {
+        return;
       }
+
+      
     });
+
 // Кнопка закрыть в модальном окне success
     closeScs.on('click', function(e) {
       e.preventDefault();
