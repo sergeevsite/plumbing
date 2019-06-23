@@ -13,7 +13,6 @@ function minifyCss() {
     })) // Сжимаем их с помощью плагина
     .pipe(dest('dist/css/')); // Выгружаем в папку
 }
-
 exports.minifyCss = minifyCss;
 
 function moveJs() {
@@ -27,7 +26,6 @@ function minifyJs() {
     .pipe(rename({extname: '.min.js'})) // Добавляем суффикс .min
     .pipe(dest('dist/js/')); // Выгружаем в папку назначения
 }
-
 exports.mmJs = series(moveJs, minifyJs);
 
 function minifyHtml() {
@@ -37,21 +35,24 @@ function minifyHtml() {
     })) // Сжимаем их с помощью плагина
     .pipe(dest('dist/')); // Выгружаем в папку 
 }
-
 exports.minifyHtml = minifyHtml;
+
+function movePhp() {
+  return src('./src/*.php') // Выбираем из папки файлы
+    .pipe(dest('dist/')); // Выгружаем в папку 
+}
+exports.movePhp = movePhp;
 
 function moveIcon() {
   return src('./src/*.ico') // Выбираем из папки файлы
     .pipe(dest('dist/')); // Выгружаем в папку 
 }
-
 exports.moveIcon = moveIcon;
 
 function moveFonts() {
   return src('./src/fonts/**/*') // Выбираем из папки файлы
     .pipe(dest('dist/fonts')); // Выгружаем в папку 
 }
-
 exports.moveFonts = moveFonts;
 
 function tinyPng() {
@@ -61,17 +62,16 @@ function tinyPng() {
     })) // Сжимаем их с помощью плагина
     .pipe(dest('dist/img/')); // Выгружаем в папку 
 }
-
 exports.tinyPng = tinyPng;
 
 function moveSVG() {
   return src('./src/img/**/*.svg') // Выбираем из папки файлы
     .pipe(dest('dist/img')); // Выгружаем в папку 
 }
-
 exports.moveSVG = moveSVG;
 
-exports.build = series(minifyCss, moveJs, minifyJs, minifyHtml, moveIcon, moveFonts, tinyPng, moveSVG);
+
+exports.build = series(minifyCss, moveJs, minifyJs, minifyHtml, movePhp, moveIcon, moveFonts, tinyPng, moveSVG);
 
 
 
