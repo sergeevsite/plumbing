@@ -4174,8 +4174,8 @@ div.invalid {
 
 .burger-menu {
   position: absolute;
-  -webkit-transform: translateY(170px);
-          transform: translateY(170px);
+  -webkit-transform: translateY(172px);
+          transform: translateY(172px);
   z-index: 1;
 }
 
@@ -5372,6 +5372,12 @@ li.slick-active button {
   }
   #callback-phone-error {
     top: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-dialog__title {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=style.css.map */

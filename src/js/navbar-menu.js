@@ -1,7 +1,7 @@
 $(document).ready(function() {
 // Меню для мобильных телефонов
 $('.burger__button').on('click', function(e){
-  e.preventDefault;
+  e.preventDefault();
   $(this).toggleClass('burger__button_active');
   $('.burger__item').toggleClass('burger__item_active');
 });
@@ -18,7 +18,11 @@ $(".burger__item").click(function () {
   jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
   return false;
   });
-  
+$('.burger__item').click(function (e){
+  e.preventDefault();
+  $('.burger__item').removeClass('burger__item_active');
+  $('.burger__button').removeClass('burger__button_active');
+});
 // Модальное окно
     var button = $('#button');
     var close = $('#close');
