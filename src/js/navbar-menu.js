@@ -56,16 +56,7 @@ $('.burger__item').click(function (e){
       }
     });
 // Форма в секции callback
-    $('#callback-form').on('submit', function(e) {
-      e.preventDefault();
-      $.ajax({
-        url: 'test.php',
-        type: 'POST',
-        data: $(this).serialize(),
-        success: function(data){
-          console.log(data);
-        }
-      });
+    $('.form__button').on('click', function(e) {
       var len = $('#callback-name').val().length;
       if( len >= 2 ){
         if ($('#callback-name').val().length && $('#callback-phone').val().length) {
