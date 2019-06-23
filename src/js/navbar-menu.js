@@ -61,7 +61,10 @@ $('.burger__item').click(function (e){
       $.ajax({
         url: 'mail.php',
         type: 'POST',
-        data: $(this).serialize()
+        data: $(this).serialize(),
+        success: function(data){
+          console.log(data);
+        }
       });
       var len = $('#callback-name').val().length;
       if( len >= 2 ){
