@@ -9,6 +9,7 @@
   <link rel="SHORTCUT ICON" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(54174784, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54174784" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
   <nav class="navbar">
         <div class="container">
           <div class="navbar-block">
@@ -63,7 +64,7 @@
                 <img src="./img/navbar/phone.png" alt="Иконка телефона">
                 <a href="tel:+78633422221">+7 (863) <b>342-22-21</b></a>
               </div>
-              <button id="button" class="button navbar__button wow slideInDown">Заказать звонок</button>
+              <button id="navbar-button" onclick="ym(54174784, 'reachGoal', 'navbar-button'); return true;" class="button navbar__button wow slideInDown">Заказать звонок</button>
             </div>
             <!-- /.navbar__info -->
           </div>
@@ -445,7 +446,7 @@
           <form action="#" id="callback-form" class="form callback__form">
             <input id="callback-name" type="text" name="username" required maxlength="15g" class="input form__input" placeholder="Введите Ваше имя">
             <input id="callback-phone" type="tel" name="phone" required class="input form__input phone" placeholder="Введите Ваш номер телефона">
-            <button class="button form__button">заказать звонок</button>
+            <button id="callback-button" onclick="ym(54174784, 'reachGoal', 'callback-button'); return true;" class="button form__button">заказать звонок</button>
           </form>
         </div>
       </div>

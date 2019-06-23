@@ -29,7 +29,7 @@ $('.burger__item').click(function (e){
 });
 
 // Модальное окно
-    var button = $('#button');
+    var button = $('#navbar-button');
     var close = $('#close');
     var modal = $('#modal');
   
